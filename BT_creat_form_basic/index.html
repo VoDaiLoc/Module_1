@@ -5,13 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BT_creat_form_basic</title>
-    <!-- <style>
-        table{
-            width: 100%;
-        }
-    </style> -->
 </head>
 <body>
+    <form action="index.html">
     <table style="width:100%">
         <caption style="text-align: center;background-color: red;color: white;"><h1>SỞ THÍCH CỦA BẠN</h1></caption>
         <thead>
@@ -56,21 +52,54 @@
             </tr>
         </tbody>
     </table>
-    <table>
+</form>
+    <form action="index.html">
+    <table style="width:70%;">
+            <caption style="text-align:left;"><h1 style="background-color: aquamarine;color: blue;">ĐĂNG KÝ HỌC VIÊN</h1></caption>
+            <tr>
+                <td style="color: blue;">Họ và tên</td>
+                <td><input type="text"></td>
+            </tr>
         <tr>
-            <td colspan="2"><h1 style="background-color: aquamarine;color: blue;">ĐĂNG KÝ HỌC VIÊN</h1></td>
+            <td style="color:blue;">Giới tính</td>
+            <td><input type="text"></td>
         </tr>
         <tr>
-            <h4 style="color: blue;">Họ và tên</h4>
-            <input type="text">
+            <td style="color: blue;">Giới tính</td>
+            <td>
+                <input type="radio" name="gioitinh">Nam
+                <input type="radio" name="gioitinh">Nữ
+
+            </td>
         </tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
+        <tr>
+            <td style="color: blue;">Địa chỉ</td>
+            <td><input type="text" ></td>
+        </tr>
+        <tr>
+            <td style="color: blue;">Lớp</td>
+            <td>
+                <select name="" id="">
+                    <option value="">-Chọn-</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td style="color: blue;">Email</td>
+            <td><input type="email"></td>
+        </tr>
+        <tr>
+            <td style="color:blue;">Điện thoại</td>
+            <td><input type="number"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Đăng ký">
+                <input type="reset" value="Nhập lại">
+            </td>
+        </tr>
     </table>
+</form>
 </body>
 </html>
