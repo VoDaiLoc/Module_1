@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- BT1: Kết quả sử dụng hàm Alert -->
+    <button type="button" onclick="showMessage()">Click me!</button>
+    <!-- BT2: Kết quả sử dụng thẻ HTML-->
+    <div id="messageDiv"></div>
+    <button type="button" onclick="showMes()" id="showMes">Click me!</button>
+    <!-- BT3: Kết quả sử dụng Document.write -->
+    <button type="button" id="Message" onclick="Message()">Click me!</button>
+    <!-- BT4: Kết quả sử dụng hàm Console.log -->
+    <button type="button" id="showM" onclick="showM()">Click me!</button>
+    <script>
+        function showMessage() {
+            alert("Xin chào!")
+        }
+        function showMes() {
+            document.getElementById("messageDiv").innerHTML="Xin chào!"
+        }
+        function Message() {
+            document.write("Xin chào!")
+        }
+        function showM() {
+            console.log("Xin chào!")
+        }
+        </script>
+</body>
