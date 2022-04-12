@@ -16,12 +16,12 @@
             </tr>
             <tr>
                 <td>
-                    <button id="cong" type="button" onclick="cong()">Addition(+)</button>
-                    <button id="tru" type="button" onclick="tru()">Subtraction(-)</button>
+                    <button type="button" onclick="cong()">Addition(+)</button>
+                    <button type="button" onclick="tru()">Subtraction(-)</button>
                 </td>
                 <td>
-                    <button id="nhan" type="button" onclick="nhan()">Multiplication(x)</button>
-                    <button id="chia" type="button" onclick="chia()">Division(/)</button>
+                    <button type="button" onclick="nhan()">Multiplication(x)</button>
+                    <button type="button" onclick="chia()">Division(/)</button>
                 </td>
             </tr>
             <tr>
@@ -31,18 +31,24 @@
         </table>
     </form>
     <script>
-        let num1 = Number(document.getElementById("num1").value)
-        let num2 = Number(document.getElementById("num2").value)
         function cong() {
+            let num1 = Number(document.getElementById("num1").value)
+            let num2 = Number(document.getElementById("num2").value)
             document.getElementById("kq").value = num1+num2
         }
         function tru() {
+            let num1 = Number(document.getElementById("num1").value)
+            let num2 = Number(document.getElementById("num2").value)
             document.getElementById("kq").value = num1-num2
         }
         function nhan() {
+            let num1 = Number(document.getElementById("num1").value)
+            let num2 = Number(document.getElementById("num2").value)
             document.getElementById("kq").value = num1*num2
         }
         function chia() {
+            let num1 = Number(document.getElementById("num1").value)
+            let num2 = Number(document.getElementById("num2").value)
             document.getElementById("kq").value = num1/num2
         }
     </script>
