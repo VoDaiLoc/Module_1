@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let weight = parseFloat(prompt('Nhập vào cân nặng của bạn (kg): '))
+        let height = parseFloat(prompt('Nhập vào chiều cao của bạn (m): '))
+        let BMI = weight/(height**2)
+        if (BMI<18.5) {
+            alert('Underweight')
+        } else if ((BMI>=18.5)&&(BMI<25)) {
+            alert('Normal')
+        } else if ((BMI>=25)&&(BMI<30)) {
+            alert('Overweight')
+        } else {
+            alert('Obese')
+        }
+    </script>
+</body>
+</html>
