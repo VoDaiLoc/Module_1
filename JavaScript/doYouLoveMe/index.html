@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="3"><h3>Do You Love Me?</h3></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="button" onclick="love()">Yes</button></td>
+            <td><button id="noLove"  type="button" onmouseover="troll()">No</button></td>
+        </tr>
+    </table>
+    <script>
+        function love() {
+            alert('<3')
+        }
+        function troll() {
+            //style="position: absolute; left: 50px; top: 0px;"
+            let x = Math.round(Math.random()*window.innerWidth) ;
+            let y = Math.round(Math.random()*window.innerHeight) ; 
+            document.getElementById('noLove').style.left = x + 'px';
+            document.getElementById('noLove').style.top = y + 'px';
+            document.getElementById('noLove').style.position = 'absolute';
+        }
+    </script>
+</body>
+</html>
