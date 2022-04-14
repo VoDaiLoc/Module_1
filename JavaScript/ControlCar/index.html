@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <img id="pic" src="image/right.jpg" alt="Car Picture">
+    <script>
+        step = 10
+        // Hàm di chuyển trái:
+        function moveLeft() {
+            let car = document.getElementById('pic')
+            if (parseInt(car.style.left) > 0)
+                car.style.left = parseInt(car.style.left) - step + 'px'
+            else
+                car.style.left = parseInt(car.style.left)
+            car.src = 'image/left.jpg'
+        }
+        // Hàm di chuyển lên:
+        function moveUp() {
+            let car = document.getElementById('pic')
+            if (parseInt(car.style.top) > 0)
+                car.style.top = parseInt(car.style.top) - step + 'px'
+            else
+                car.style.top = parseInt(car.style.top)
+            car.src = 'image/up.jpg'
+        }
+        // Hàm di chuyển sang phải:
+        function moveRight() {
+            let car = document.getElementById('pic')
+            if (parseInt(car.style.left) < (window.innerWidth - 150))
+                car.style.left = parseInt(car.style.left) + step + 'px'
+            else
+                car.style.left = parseInt(car.style.left)
+            car.src = 'image/right.jpg'
+        }
+        // Hàm di chuyển xuống dưới:
+        function moveDown() {
+            let car = document.getElementById('pic')
+            if (parseInt(car.style.top) < (window.innerHeight - 150))
+                car.style.top = parseInt(car.style.top) + step + 'px'
+            else
+                car.style.top = parseInt(car.style.top)
+            car.src = 'image/down.jpg'
+        }
+        // Hàm khai báo vị trí ban đầu của car:
+        function init() {
+            let car = document.getElementById('pic')
+            car.style.position = 'relative'
+            car.style.left = 0
+            car.style.top = 0
+        } 
+        // Gọi hàm init():
+        init()
+        // Hàm nhận phím:
+        window.addEventListener('keydown', move)
+        function move(e) {
+            switch (e.keyCode) {
+                case 37:
+                    moveLeft()
+                    break
+                case 38:
+                    moveUp()
+                    break
+                case 39:
+                    moveRight()
+                    break
+                case 40:
+                    moveDown()
+                    break
+            }
+
+        }
+           
+    </script>
+</body>
+</html>

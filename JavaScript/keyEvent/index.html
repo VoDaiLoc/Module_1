@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0pc;
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="nobita" src="image/right.jpg" style="position: relative;top: 0px;left: 0px;" alt="Nobita Picture">
+
+    <script>
+        step = 5
+        // Di chuyển mũi tên lên:
+        function upArrowPressed() {
+            let elemen = document.getElementById('nobita')
+            if (parseInt(elemen.style.top) > step)
+                elemen.style.top = parseInt(elemen.style.top) - step + 'px'
+            else
+                elemen.style.top = parseInt(elemen.style.top)
+            elemen.src = 'image/up.jpg'
+        }
+        // Di chuyển mũi tên xuống:
+        function downArrowPressed() {
+            let elemen = document.getElementById('nobita')
+            if (parseInt(elemen.style.top) < (window.innerHeight - 171))
+                elemen.style.top = parseInt(elemen.style.top) + step + 'px'
+            else
+                elemen.style.top = parseInt(elemen.style.top)
+            elemen.src = 'image/down.jpg'
+        }
+        // Di chuyển mũi tên sang trái:
+        function leftArrowPressed() {
+            let elemen = document.getElementById('nobita')
+            if (parseInt(elemen.style.left) >= step)
+                elemen.style.left = parseInt(elemen.style.left) - step + 'px'
+            else
+                elemen.style.left = parseInt(elemen.style.left)
+            elemen.src = 'image/left.jpg'
+        }
+        // Di chuyển mũi tên sang phải:
+        function rightArrowPressed() {
+            let elemen = document.getElementById('nobita')
+            if (parseInt(elemen.style.left) < (window.innerWidth - 171))
+                elemen.style.left = parseInt(elemen.style.left) + step + 'px'
+            else
+                elemen.style.left = parseInt(elemen.style.left)
+            elemen.src = 'image/right.jpg'
+        }
+        // Hàm nhận phím:
+        window.addEventListener('keydown', moveKey)
+        function moveKey(evt) {
+            switch (evt.keyCode) {
+                case 37:
+                    leftArrowPressed()
+                    break
+                case 38:
+                    upArrowPressed()
+                    break
+                case 39:
+                    rightArrowPressed()
+                    break
+                case 40:
+                    downArrowPressed()
+                    break
+            }
+        }
+    </script>
+</body>
+
+</html>
