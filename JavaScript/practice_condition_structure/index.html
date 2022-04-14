@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Bài tập 1:
+        let a = parseInt(prompt('Nhập vào số a:'));
+        let b = parseInt(prompt('Nhập vào số b:'));
+        if (a%b==0)
+            alert('a chia hết cho b')
+        else
+            alert('a không chia hết cho b')
+        // Bài tập 2:
+        let age = parseInt(prompt('Nhập tuổi:'))
+        if (age>=15)
+            alert('Bạn đủ điều kiện vào học lớp 10')
+        else
+            alert('Bạn không đủ tuổi vào học lớp 10')
+        // Bài tập 3:
+        let num = parseInt(prompt('Nhập vào một số nguyên:'))
+        if (num>0)
+            alert('Đây là số lớn hơn 0')
+        else
+            alert('Đây là số nhỏ hơn 0')
+        // Bài tập 4:
+        let a = parseInt(prompt('Nhập vào số nguyên a:'))
+        let b = parseInt(prompt('Nhập vào số nguyên b:'))
+        let c = parseInt(prompt('Nhập vào số nguyên c:'))
+        if (a>b)
+            if (a>c)
+                alert(`${a} là giá trị lớn nhất`)
+            else
+                alert(`${c} là giá trị lớn nhất`)
+        else if (b>c)
+                alert(`${b} là giá trị lớn nhất`)
+            else
+                alert(`${c} là giá trị lớn nhất`)
+        // Bài tập 5:
+        let kt = parseFloat(prompt('Nhập điểm kiểm tra:'))
+        let gk = parseFloat(prompt('Nhập điểm giữa kỳ:'))
+        let ck = parseFloat(prompt('Nhập điểm cuối kỳ:'))
+        let dtb = (kt+gk*2+ck*3)/6
+        alert(`Điểm trung bình là: ${dtb}`)
+        if (dtb<5)
+            alert('Yếu')
+        else if (dtb<7)
+            alert('Trung bình')
+            else if (dtb<8)
+                alert('Khá')
+                else if (dtb<9)
+                    alert('Giỏi')
+                    else
+                        alert('Xuất sắc')
+        // Bài tập 6:
+        let ds = parseFloat(prompt('Nhập doanh số bán hàng: '))
+        let hh = 0.1*ds
+        alert(`Hoa hồng nhận được: ${hh}`)
+        // Bài tập 7:
+        let p = parseFloat(prompt('Nhập số phút đã gọi:'))
+        let money = p*1200
+        alert(`Số tiền bạn phải trả là: ${money} đồng`)
+    </script>
+</body>
+</html>
