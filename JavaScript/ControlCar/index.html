@@ -15,11 +15,11 @@
 <body>
     <img id="pic" src="image/right.jpg" alt="Car Picture">
     <script>
-        step = 10
+        step = 20
         // Hàm di chuyển trái:
         function moveLeft() {
             let car = document.getElementById('pic')
-            if (parseInt(car.style.left) > 0)
+            if (parseInt(car.style.left) > step)
                 car.style.left = parseInt(car.style.left) - step + 'px'
             else
                 car.style.left = parseInt(car.style.left)
@@ -28,7 +28,7 @@
         // Hàm di chuyển lên:
         function moveUp() {
             let car = document.getElementById('pic')
-            if (parseInt(car.style.top) > 0)
+            if (parseInt(car.style.top) > step)
                 car.style.top = parseInt(car.style.top) - step + 'px'
             else
                 car.style.top = parseInt(car.style.top)
@@ -37,7 +37,7 @@
         // Hàm di chuyển sang phải:
         function moveRight() {
             let car = document.getElementById('pic')
-            if (parseInt(car.style.left) < (window.innerWidth - 150))
+            if (parseInt(car.style.left) < (window.innerWidth - 150 - step))
                 car.style.left = parseInt(car.style.left) + step + 'px'
             else
                 car.style.left = parseInt(car.style.left)
@@ -46,7 +46,7 @@
         // Hàm di chuyển xuống dưới:
         function moveDown() {
             let car = document.getElementById('pic')
-            if (parseInt(car.style.top) < (window.innerHeight - 150))
+            if (parseInt(car.style.top) < (window.innerHeight - 150 - step))
                 car.style.top = parseInt(car.style.top) + step + 'px'
             else
                 car.style.top = parseInt(car.style.top)

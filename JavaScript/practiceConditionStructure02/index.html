@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Bài 1:
+        // let c = parseFloat(prompt('Nhập độ C: '));
+        // let f = c*9/5 + 32;
+        // document.write(`${c} độ C tương ứng với ${f} độ F`)
+        // Bài 2:
+        // let m = parseFloat(prompt('Nhập số mét: '));
+        // let f = m*3.2808;
+        // document.write(`${m} mét tương ứng với ${f} feet`)
+        // Bài 3:
+        // let a = parseFloat(prompt('Nhập cạnh a của hình vuông: '));
+        // let s = a*a;
+        // document.write(`Diện tích hình vuông là: ${s}`)
+        // Bài 4:
+        // let a = parseFloat(prompt('Nhập chiều dài của hình chữ nhật: '));
+        // let b = parseFloat(prompt('Nhập chiều rộng của hình chữ nhật: '));
+        // let s = a*b;
+        // document.write(`Diện tích hình chữ nhật là: ${s}`)
+        // Bài 5:
+        // let a = parseFloat(prompt('Nhập chiều dài cạnh kề thứ nhất của tam giác vuông: '));
+        // let b = parseFloat(prompt('Nhập chiều dài cạnh kề thứ 2 của tam giác vuông: '));
+        // let s = (a*b)/2;
+        // document.write(`Diện tích hình tam giác vuông là: ${s}`)
+        // Bài 6:
+        // let a = parseFloat(prompt('Nhập a: '))
+        // let b = parseFloat(prompt('Nhập b: '))
+        // if (a==0)
+        //     if (b==0)
+        //         document.write('Phương trình có vô số nghiệm')
+        //     else
+        //         document.write('Phương trình vô nghiệm')
+        // else
+        //     document.write(`Phương trình có nghiệm duy nhất: x = ${-b/a}`)   
+        // Bài 7:
+        // let a = parseFloat(prompt('Nhập a: '));
+        // let b = parseFloat(prompt('Nhập b: '));
+        // let c = parseFloat(prompt('Nhập c: '));
+        // delta = b*b - 4*a*c;
+        // if (a==0)
+        //     if (b==0)
+        //         if (c==0)
+        //             document.write('Phương trình có vô số nghiệm')
+        //         else
+        //             document.write('Phương trình vô nghiệm')
+        //     else
+        //         document.write(`Phương trình có nghiệm duy nhất: x = ${-c/b}`)
+        // else if (delta<0)
+        //         document.write('Phương trình vô nghiệm')
+        //     else if (delta==0)
+        //             document.write(`Phương trình có nghiệm kép: x1 = x2 = ${-b/(2*a)}`)
+        //             else
+        //             document.write(`Phương trình có 2 nghiệm phân biệt: x1 = ${(-b-Math.sqrt(delta))/(2*a)}, x2 = ${(-b+Math.sqrt(delta))/(2*a)}`)
+        // Bài 8:
+        // let age = parseInt(prompt('Nhập vào tuổi của bạn:'));
+        // if (age>0 && age<120)
+        //     document.write(`Tuổi của bạn là: ${age}`);
+        // else
+        //     document.write('Tuổi của 1 người chỉ từ 0 - 120!')
+        // Bài 9:
+        // let a = parseInt(prompt('Nhập vào cạnh thứ nhất của tam giác: '))
+        // let b = parseInt(prompt('Nhập vào cạnh thứ 2 của tam giác: '))
+        // let c = parseInt(prompt('Nhập vào cạnh thứ 3 của tam giác: '))
+        // if (a>0 && b>0 && c>0 && (a+b>c) && (b+c>a) && (c+a>b))
+        //     document.write(`${a}, ${b}, ${c} là 3 cạnh của 1 tam giác`)
+        // else
+        //     document.write(`${a}, ${b}, ${c} không phải 3 cạnh của 1 tam giác`)
+        // Bài 10:
+        // let A = parseFloat(prompt('Nhập điện năng tiêu thụ: '));
+        // if (A<0)
+        //     alert('Điện năng tiêu thụ phải >0')
+        // else if (A<=50)
+        //         document.write(`Tiền điện phải trả là: ${A*1678} đồng.`)
+        //     else if (A<=100)
+        //             document.write(`Tiền điện phải trả là: ${A*1734} đồng.`)
+        //         else if (A<200)
+        //                 document.write(`Tiền điện phải trả là: ${A*2014} đồng.`)
+        //             else if (A<300)
+        //                     document.write(`Tiền điện phải trả là: ${A*2536} đồng.`)
+        //                 else if (A<400)
+        //                         document.write(`Tiền điện phải trả là: ${A*2834} đồng.`)
+        //                     else
+        //                         document.write(`Tiền điện phải trả là: ${A*2927} đồng.`)
+        // Bài 11:
+        // let perI = parseFloat(prompt('Nhập thu nhập tháng của bạn (triệu đồng):'))
+        // if (perI <= 0)
+        //     document.write('Thu nhập cá nhân phải lớn hơn 0')
+        // else if (perI <= 5)
+        //     document.write(`Số thuế phải nộp: ${5 / 100 * perI} triệu đồng`)
+        // else if (perI <= 10)
+        //     document.write(`Số thuế phải nộp: ${10 / 100 * perI - 0.25} triệu đồng`)
+        // else if (perI <= 18)
+        //     document.write(`Số thuế phải nộp: ${15 / 100 * perI - 0.75} triệu đồng`)
+        // else if (perI <= 32)
+        //     document.write(`Số thuế phải nộp: ${20 / 100 * perI - 1.65}`)
+        // else if (perI <= 52)
+        //     document.write(`Số thuế phải nộp: ${25 / 100 * perI - 3.25} triệu đồng`)
+        // else if (perI <= 80)
+        //     document.write(`Số thuế phải nộp: ${30 / 100 * perI - 5.85} triệu đồng`)
+        // else
+        //     document.write(`Số thuế phải nộp: ${35 / 100 * perI - 9.85} triệu đồng`)
+        // Bài 12:
+        // let PV = parseFloat(prompt('Nhập số tiền bạn muốn gửi: '))
+        // let i = parseFloat(prompt('Nhập lãi suất hàng tháng (%):'))
+        // let n = parseInt(prompt('Nhập số tháng bạn muốn gửi:'))
+        // let FV = PV*(1+i/100)**n
+        // document.write(`Số tiền bạn nhận được sau ${n} tháng là: ${FV} đồng`)
+    </script>
+</body>
+
+</html>
