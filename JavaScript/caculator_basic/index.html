@@ -6,13 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table {
+            width: 400px;
+            height: 500px;
+            border-collapse: collapse;
+            border: 1px solid #333 ;
+        }
+        td {
+            width: 100px;
+            height: 100px;
+        }
+        button {
+            font-size: xx-large;
+            color: blue;
+            width: 100px;
+            height: 100px;
+        }
+        input {
+            text-align: right;
+            font-size: xx-large;
+            width: 300px;
+            height: 60px;
+        }
+    </style>
 </head>
 
 <body>
     <table>
         <tbody>
             <tr>
-                <td colspan="4"><input type="text" readonly id="screen"></td>
+                <td id='scr' colspan="4"><input type="text" readonly id="screen"></td>
             </tr>
             <tr>
                 <td><button type="button" onclick="keyNumber(1)">1</button></td>
@@ -41,33 +65,33 @@
         </tbody>
     </table>
     <script>
-        var selectedOperand =false;
+        var canEnterAnOperator =false
         var screen = document.querySelector('#screen')
         function keyNumber(num) {
-            selectedOperand = false;
             screen.value += num
+            canEnterAnOperator = true
         }
         function keyOperator(opt) {
             switch (true) {
-                case opt == '+' && !selectedOperand && screen.value != '':
+                case opt == '+' && canEnterAnOperator && screen.value != '':
                     screen.value += opt
-                    selectedOperand = true;
+                    selectedOperand = false
                     break
-                case opt == '-' && !selectedOperand && screen.value != '':
+                case opt == '-' && canEnterAnOperator && screen.value != '':
                     screen.value += opt
-                    selectedOperand = true;
+                    selectedOperand = false
                     break
-                case opt == '*' && !selectedOperand && screen.value != '':
+                case opt == '*' && canEnterAnOperator && screen.value != '':
                     screen.value += opt
-                    selectedOperand = true;
+                    selectedOperand = false
                     break
-                case opt == '/' && !selectedOperand && screen.value != '':
+                case opt == '/' && canEnterAnOperator && screen.value != '':
                     screen.value += opt
-                    selectedOperand = true;
+                    selectedOperand = false
                     break
-                case opt == '=' && !selectedOperand && screen.value != '':
+                case opt == '=' && canEnterAnOperator && screen.value != '':
                     screen.value = eval(screen.value);
-                    selectedOperand = true;
+                    selectedOperand = false
                     break
                 case opt == 'C':
                     screen.value = ''
@@ -76,5 +100,4 @@
         }
     </script>
 </body>
-
 </html>
