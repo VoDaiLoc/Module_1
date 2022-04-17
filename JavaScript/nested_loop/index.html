@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 333px;
+            height: 333px;
+            border-collapse: collapse;
+            border: 3px solid #333;
+            text-align: center;
+        }
+        td {
+            width: 30px;
+            height: 30px;
+            border: 3px solid #333;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // Dùng for:
+        // let i, j;
+        // document.write('<table>');
+        // document.write('<tr>')
+        // for (i = 1; i <= 10; i++) {
+        //     for (j = 1; j <= 10; j++) {
+        //         document.write('<td>'+(i * j)+'</td>');
+        //     }
+        //     document.write('</tr>'); 
+        // }
+        
+        // document.write('</table>');
+        // Dùng while:
+        let i=1;
+        let j=1;
+        document.write('<table>');
+        document.write('<tr>');
+        while (i<=10) {
+            while (j<=10) {
+                document.write('<td>'+(i*j)+'</td>');
+                j++;
+            }
+            i++;
+            j=1;
+            document.write('<tr>');
+        }
+        document.write('<table>');
+    </script>
+</body>
+
+</html>
