@@ -10,25 +10,47 @@
 
 <body>
     <script>
-        function checkSNT(n) {
-            if (n == 2)
-                return true;
-            if (n > 2) {
-                for (i = 2; i < n; i++) {
-                    if (n % i == 0)
-                        return false;
-                    else
-                        return true;
-                }
-            }
-        }
+        // function checkSNT(n) {
+        //     if (n == 2)
+        //         return true;
+        //     if (n > 2) {
+        //         for (i = 2; i < n; i++) {
+        //             if (n % i == 0)
+        //                 return false;
+        //             else
+        //                 if (i == (n - 1))
+        //                     return true;
+        //         }
+        //     }
+        // }
+        // let num = parseInt(prompt('Nhập số lượng số nguyên tố muốn in ra: '));
+        // let count = 0;
+        // let n = 2;
+        // while (count < num) {
+        //     if (checkSNT(n)) {
+        //         document.write(n + ' ');
+        //         count++;
+        //     }
+        //     n++;
+        // }
         let num = parseInt(prompt('Nhập số lượng số nguyên tố muốn in ra: '));
         let count = 0;
         let n = 2;
         while (count < num) {
-            if (checkSNT(n)) {
+            if (n == 2) {
                 document.write(n + ' ');
                 count++;
+            }
+            if (n > 2) {
+                for (i = 2; i < n; i++) {
+                    if (n % i == 0)
+                        break;
+                    else
+                        if (i == (n - 1)) {
+                            document.write(n + ' ');
+                            count++;
+                        }
+                }
             }
             n++;
         }

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 400px;
+            height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <h1 style="color: blue;">Hãy thử đoán xem!</h1>
+            </td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="guessTheNumber()">Bắt đầu chơi</button></td>
+        </tr>
+    </table>
+    <script>
+        // Bài 1:
+        // for (i=1;i<=100;i++) {
+        //     document.write(i+' ');
+        //     if (i==99)
+        //         alert('Đã hoàn thành');
+        // }
+        // Bài 2:
+        // let C = Number(prompt('Nhập nhiệt độ: '));
+        // while (C<20||C>100) {
+        //     if (C<20)
+        //     C = Number(prompt('Tăng nhiệt độ lên nào: '));
+        //     else
+        //     C = Number(prompt('Giảm nhiệt độ xuống nào: '));
+        // }
+        // Bài 3:
+        // function F(n) {
+        //     if (n==1 || (n==2))
+        //         return 1;
+        //     if (n>2)
+        //         return F(n-1) + F(n-2);   
+        // }
+        // for (i=1;i<=20;i++) {
+        //     document.write(F(i)+' ');
+        // }
+        // Bài 4:
+        // function F(n) {
+        //     if (n==1 || (n==2))
+        //         return 1;
+        //     if (n>2)
+        //         return F(n-1) + F(n-2);   
+        // }
+        // let count = 0;
+        // let n = 1;
+        // while (count<1) {
+        //     if (F(n)%5==0) {
+        //         document.write(F(n));
+        //         count++;
+        //     }
+        //     n++;
+        // }
+        // Bài 5:
+        // function F(n) {
+        //     if (n==1 || (n==2))
+        //         return 1;
+        //     if (n>2)
+        //         return F(n-1) + F(n-2);   
+        // }
+        // let sum = 0;
+        // for (n=1;n<=20;n++) {
+        //     sum+=F(n);
+        // }
+        // document.write('Tổng 20 số đầu tiên trong dãy Fibonaci là: ' + sum);
+        // Bài 6:
+        // let n = 0;
+        // let count = 0;
+        // let sum = 0;
+        // while (count < 30) {
+        //     if (n % 7 == 0) {
+        //         sum += n;
+        //         count++
+        //     }
+        //     n++;
+        // }
+        // document.write(sum + ' ');
+        // Bài 7:
+        // for (i=1;i<=100;i++) {
+        //     if (i%3==0)
+        //         document.write('Fizz ');
+        //     else if (i%5==0)
+        //         document.write('Buzz ');
+        //     else if (i%3==0 && i%5==0)
+        //         document.write('FizzBuzz ');
+        //     else
+        //         document.write(i+' ');
+        // }
+        // Bài 8:
+        function guessTheNumber() {
+            let min = Number(prompt('Bạn muốn đoán số nằm trong khoảng từ: '));
+            let max = Number(prompt('Đến: '));
+            let random = Math.floor(Math.random() * (max - min + 1)) + min;
+            let choose = Number(prompt('Số bạn đoán là: '));
+            while (choose != random) {
+                if (choose < random)
+                    choose = Number(prompt('Số bạn đoán hơi bé, mời bạn đoán lại:'));
+                else
+                    choose = Number(prompt('Số bạn đoán hơi lớn, mời bạn đoán lại:'));
+            }
+            if (choose == random)
+                alert(`Chúc mừng bạn ${random} là số chính xác!`);
+        }
+    </script>
+</body>
+
+</html>
