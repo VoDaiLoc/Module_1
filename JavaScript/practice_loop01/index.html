@@ -108,11 +108,13 @@
             let max = Number(prompt('Đến: '));
             let random = Math.floor(Math.random() * (max - min + 1)) + min;
             let choose = Number(prompt('Số bạn đoán là: '));
-            while (choose != random) {
+            count = 0;
+            while ((choose != random)&&(count<2)) {
                 if (choose < random)
                     choose = Number(prompt('Số bạn đoán hơi bé, mời bạn đoán lại:'));
                 else
                     choose = Number(prompt('Số bạn đoán hơi lớn, mời bạn đoán lại:'));
+                count++;
             }
             if (choose == random)
                 alert(`Chúc mừng bạn ${random} là số chính xác!`);
