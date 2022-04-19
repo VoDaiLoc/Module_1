@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            text-align: center;
+            width: 700px;
+            height: 700px;
+        }
+        td {
+            width: 100px;
+            height: 100px;
+            font-size: 80px;
+            color: #FF69B4;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // Bài 1:
+        // let n = Number(prompt('Nhập số lượng phần tử trong dãy Fibonaci muốn hiển thị: '));
+        // let n1 = 1;
+        // let n2 = 1;
+        // document.write(n1+' '+n2+ ' ');
+        // for (i=3;i<=n;i++) {
+        //     n3 = n1+n2;
+        //     n1=n2;
+        //     n2=n3;
+        //     document.write(n3+' ');
+        // }
+        // Bài 2:
+        // Cách 1:
+        // let n = Number(prompt('Nhập vào 1 số nguyên dương: '));
+        // gthua = 1;
+        // for (i=2;i<=n;i++) {
+        //     gthua*=i;
+        // }
+        // document.write(`Giai thừa của ${n} là: ${gthua}`);
+        // Cách 2:
+        // let n = Number(prompt('Nhập vào 1 số nguyên dương: '));
+        // function gthua(n) {
+        //     if (n == 1)
+        //         return 1;
+        //     else
+        //         return gthua(n - 1) * n;
+        // }
+        // document.write(`Giai thừa của ${n} là: ${gthua(n)}`);
+        // Bài 3:
+        // TH1:
+        // for (i = 0; i < 5; i++) {
+        //     for (j = 0; j < 5; j++) {
+        //         if (i == 4 || j == 0 || i == j || (i == 2 && j == 1) || (i == 3 && j == 2) || (i == 3 && j == 1))
+        //             document.write('*');
+        //         else document.write(' ');
+        //     }
+        //     document.write('<br>');
+        // }
+        // // TH2:
+        // for (i = 0; i < 5; i++) {
+        //     for (j = 0; j < 5; j++) {
+        //         if (i == 0 || j == 0 || (i == 1 && j == 1) || (i == 2 && j == 2) || (i == 1 && j == 2)
+        //             || (i == 2 && j == 1) || (i == 3 && j == 1) || (i == 1 && j == 3))
+        //             document.write('*');
+        //         else document.write(' ');
+        //     }
+        //     document.write('<br>');
+        // }
+        // // TH3:
+        // for (i = 0; i < 5; i++) {
+        //     for (j = 0; j < 5; j++) {
+        //         if (i == 4 || j == 4 || (i == 3 && j == 3) || (i == 2 && j == 2) || (i == 3 && j == 2)
+        //             || (i == 2 && j == 3) || (i == 3 && j == 1) || (i == 1 && j == 3))
+        //             document.write('*');
+        //         else document.write(' ');
+        //     }
+        //     document.write('<br>');
+        // }
+        // TH4:
+        // for (i = 0; i < 5; i++) {
+        //     for (j = 0; j < 5; j++) {
+        //         if (i == 0 || j == 4 || i == j || (i == 1 && j == 2) || (i == 2 && j == 3) || (i == 1 && j == 3))
+        //             document.write('*');
+        //         else document.write(' ');
+        //     }
+        //     document.write('<br>');
+        // }
+        // Bài 4:
+        // for (i = 0; i < 7; i++) {
+        //     for (j = 0; j < 21; j++) {
+        //         if (i == 0 || i == 6 || j == 0 || j == 20)
+        //             document.write('*');
+        //         else
+        //             document.write('&nbsp&nbsp');
+        //     }
+        //     document.write('<br>')
+        // }
+        // Bài 5:
+        // let PV = Number(prompt('Nhập vào số tiền bạn muốn gửi ngân hàng: '));
+        // let i = Number(prompt('Nhập lãi suất hàng tháng: '));
+        // let n = Number(prompt('Nhập kỳ hạn muốn gửi (tháng): '));
+        // let FV = PV*(1+i/100)**n;
+        // document.write(`Số tiền của bạn sau ${n} tháng gửi tiết kiệm là: ${FV} đồng`);
+        // Bài 6:
+        // Cách 1:
+        // for (i = 0; i < 7; i++) {
+        //     for (j = 0; j < 7; j++) {
+        //         if ((i == 0 && j == 1) || (i == 0 && j == 2) || (i == 0 && j == 4) || (i == 0 && j == 5) ||
+        //             (i == 1 && j == 0) || (i == 1 && j == 3) || (i == 1 && j == 6) || (i == 6 && j == 3) ||
+        //             (i == 2 && j == 0) || (i == 2 && j == 6) || (i == 3 && j == 0) || (i == 3 && j == 6) ||
+        //             (i == 4 && j == 1) || (i == 4 && j == 5) || (i == 5 && j == 2) || (i == 5 && j == 4))
+        //             document.write('*');
+        //         else
+        //             document.write('&nbsp&nbsp');
+        //     }
+        //     document.write('<br>');
+        // }
+        // Cách 2:
+        let str = "<table>";
+        for (i = 0; i < 7; i++) {
+            str += "<tr>";
+            for (j = 0; j < 7; j++) {
+                if ((i == 0 && j == 1) || (i == 0 && j == 2) || (i == 0 && j == 4) || (i == 0 && j == 5) ||
+                    (i == 1 && j == 0) || (i == 1 && j == 3) || (i == 1 && j == 6) || (i == 6 && j == 3) ||
+                    (i == 2 && j == 0) || (i == 2 && j == 6) || (i == 3 && j == 0) || (i == 3 && j == 6) ||
+                    (i == 4 && j == 1) || (i == 4 && j == 5) || (i == 5 && j == 2) || (i == 5 && j == 4)) {
+                    str += "<td>";
+                    str += '*';
+                    str += "</td>";
+                }
+                else {
+                    str += "<td>";
+                    str += ' ';
+                    str += "</td>";
+                }
+            }
+            str += "</tr>";
+        }
+        str += "</table>"
+        document.write(str);
+    </script>
+</body>
+
+</html>
