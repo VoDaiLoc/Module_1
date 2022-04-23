@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+    <h1>Dictionary</h1>
+    </p>
+    <p><label>Tiếng Anh</label> <input type="text" name="" id="eng">
+        <button type="button" onclick="translates()">Dịch</button>
+    </p>
+    <p>Tiếng Việt:  <span id="vie"></span></p>
+    <script>
+        function translates() {
+            let englishs = ['i', 'love', 'codegym'];
+            let vietnameses = ['tôi', 'yêu', 'codegym'];
+            let eng = document.querySelector('#eng').value;
+            let vie = document.querySelector('#vie');
+            for (i = 0; i < englishs.length; i++) {
+                if (eng == englishs[i]) {
+                    vie.innerHTML = vietnameses[i];
+                    break;
+                }
+                else if (i==englishs.length-1)
+                    vie.innerHTML = 'Không tìm thấy từ này trong từ điển';
+            }
+        }
+    </script>
+</body>
+
+</html>
