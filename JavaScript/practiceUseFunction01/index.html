@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Bài 1:
+        // function alertMassage() {
+        //     alert('Xin chao');
+        // }
+        // alertMassage();
+        // Bài 2:
+        // function addValue(number) {
+        //     number++;
+        //     document.write(number);
+        // }
+        // addValue(5);
+        // Bài 3:
+        // function total(num1, num2) {
+        //     if (num1 > num2)
+        //         alert(`${num1} lớn hơn ${num2}`);
+        //     else
+        //         return num1 + num2;
+        // }
+        // document.write(total(10,6));
+        // Bài 4:
+        // function addNumbers() {
+        //     firstNum = 4;
+        //     secondNum = 8;
+        //     result = firstNum + secondNum;
+        //     return result;
+        // }
+        // result = 0;
+        // alert(result);
+        // result = addNumbers();
+        // alert(result);
+        // Bài 5:
+        let stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let constellations = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        function findStarOfConstellation(star) {
+            let find = false;
+            for (let i = 0; i < stars.length; i++) {
+                if (stars[i] == star) {
+                    document.write(`Ngôi sao ${star} tương ứng với chòm sao ${constellations[i]}`);
+                    find = true;
+                    break;
+                }
+            }
+            if (find == false)
+                document.write('Không tìm thấy ngôi sao này!');
+        }
+        let star = prompt('Nhập vào ngôi sao bạn muốn tìm kiếm: ');
+        findStarOfConstellation(star);
+    </script>
+</body>
+
+</html>
