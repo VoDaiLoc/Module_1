@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Bài 1:
+        // function square(num) {
+        //     return num*num;
+        // }
+        // document.write(square(5));
+        // // Bài 2:
+        // function diameterOfACircle(r) {
+        //     return 2 * Math.PI * r;
+        // }
+        // function circleArea(r) {
+        //     return Math.PI * r * r;
+        // }
+        // document.write(diameterOfACircle(3));
+        // document.write(circleArea(5));
+        // Bài 3:
+        // function factorial(num) {
+        //     if (num == 1)
+        //         return 1
+        //     else
+        //         return num * factorial(num - 1);
+        // }
+        // document.write(factorial(3));
+        // Bài 4:
+        // let check = prompt('Nhập vào chuỗi bất kỳ:');
+        // function checkNumber(check) {
+        //     if (isNaN(check))
+        //         return false;
+        //     else
+        //         return true;
+        // }
+        // document.write(checkNumber(check));
+        // Bài 5:
+        // let num1 = parseInt(prompt('Nhập vào số nguyên thứ 1:'));
+        // let num2 = parseInt(prompt('Nhập vào số nguyên thứ 1:'));
+        // let num3 = parseInt(prompt('Nhập vào số nguyên thứ 1:'));
+        // function getMin(num1, num2, num3) {
+        //     let arr = [];
+        //     arr.push(num1, num2, num3);
+        //     min = arr[0];
+        //     for (i = 0; i < arr.length; i++) {
+        //         if (arr[i] < min)
+        //             min = arr[i];
+        //     }
+        //     document.write(`Giá trị nhỏ nhất là: ` + min);
+        // }
+        // getMin(num1, num2, num3);
+        // Bài 6:
+        // let num = parseInt(prompt('Nhập vào 1 số:'));
+        // function integer(num) {
+        //     if (num > 0)
+        //         return true;
+        //     else
+        //         return false;
+        // }
+        // document.write(integer(num));
+        // // Bài 7:
+        // let num1 = parseInt(prompt('Nhập số nguyên thứ 1:'));
+        // let num2 = parseInt(prompt('Nhập số nguyên thứ 2:'));
+        // function changeLocation(num1, num2) {
+        //     tepm = num1;
+        //     num1 = num2;
+        //     num2 = tepm;
+        //     document.write(`num1 và num2 sau khi đổi là: ${num1} và ${num2}`);
+        // }
+        // changeLocation(num1, num2);
+        // Bài 8:
+        // let size = Number(prompt('Nhập vào kích thước mảng cần tạo:'));
+        // function reverseArray(size) {
+        //     let int = new Array(size);
+        //     for (let i = 0; i < int.length; i++) {
+        //         int[i] = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
+        //     }
+        //     document.write(`Mảng ban đầu là: ${int} <br>`);
+        //     document.write(`Mảng sau khi đảo ngược là: ${int.reverse()}`);
+        // }
+        // reverseArray(size);
+        // Bài 9:
+        let ch = 15;
+        function reverseArray(ch) {
+            let int = new Array(100);
+            for (let i = 0; i < int.length; i++) {
+                int[i] = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
+            }
+            document.write(int+'<br>');
+            let chOfInt = true;
+            for (let j = int.length; j >= 0; j--) {
+                if (int.indexOf(ch, j) != -1) {
+                    document.write(`Vị trí xuất hiện của kí tự ${ch} trong mảng là: ${j}`);
+                    chOfInt = false;
+                }
+            }
+            if (chOfInt == true);
+            document.write('-1');
+        }
+        reverseArray(ch);
+    </script>
+</body>
+
+</html>
