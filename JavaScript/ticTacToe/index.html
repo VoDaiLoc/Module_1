@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .td {
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 10px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var number = 10;
+        var caro = new Array(number);
+        const x_value = 1;
+        const o_value = -1;
+        const player1 = 1;
+        const player2 = 2;
+        let player = player1;
+        function renderCaro() {
+            let tbcaro = '<table class="table">';
+            for (let i = 0; i < number; i++) {
+                tbcaro += '<tr class ="tr">';
+                caro[i] = new Array(number);
+                for (let j = 0; j < number; j++) {
+                    tbcaro += `<td class="td" onclick="play(${i},${j})">
+                     ${caro[i][j] == x_value ? 'X' : (caro[i][j] == o_value ? 'O' : '&nbsp')}   
+                        </td >`;
+                }
+                tbcaro += '</tr>';
+            }
+            tbcaro += '</table>';
+            document.body.innerHTML = tbcaro;
+        }
+        function play(row, col) {
+            if (player == player1) {
+                caro[row][col] = x_value;
+                player = player2;
+            }
+            else {
+                caro[row][col] = o_value;
+                player = player1;
+            }
+            renderCaro();
+        }
+        renderCaro();
+    </script>
+</body>
+
+</html>
