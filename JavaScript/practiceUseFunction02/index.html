@@ -87,22 +87,26 @@
         // }
         // reverseArray(size);
         // Bài 9:
-        let ch = 15;
+        let ch = 27;
+        // let numbers = [1, 2, 3, 4, 5, 6, 7, 5, 9, 10];
+
         function reverseArray(ch) {
-            let int = new Array(100);
-            for (let i = 0; i < int.length; i++) {
-                int[i] = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
+            let numbers = new Array(100);
+            for (let i = 0; i < numbers.length; i++) {
+                numbers[i] = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
             }
-            document.write(int+'<br>');
-            let chOfInt = true;
-            for (let j = int.length; j >= 0; j--) {
-                if (int.indexOf(ch, j) != -1) {
-                    document.write(`Vị trí xuất hiện của kí tự ${ch} trong mảng là: ${j}`);
-                    chOfInt = false;
+            document.write(numbers + '<br>');
+            let find = false;
+            document.write(`Vị trí xuất hiện của kí tự ${ch} trong mảng là: `);
+            for (let j = 0; j < numbers.length; j++) {
+                if (numbers[j] == ch) {
+                    document.write(`${j} `);
+                    find = true;
                 }
             }
-            if (chOfInt == true);
-            document.write('-1');
+            if (find == false) {
+                document.write('-1');
+            }
         }
         reverseArray(ch);
     </script>
