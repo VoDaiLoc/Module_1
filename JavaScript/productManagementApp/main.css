@@ -1,0 +1,34 @@
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 400px;
+    height: auto;
+}
+
+th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+button {
+    color: aliceblue;
+    background-color: green;
+}
+
+.stt {
+    width: 50px;
+}
+
+.sp {
+    width: 200px;
+}
+
+/* .xsp {
+    width: 150px;
+} */
