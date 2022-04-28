@@ -21,10 +21,10 @@ function addProduct() {
     alert(`Sản phẩm ${product} đã được thêm thành công!`);
 }
 function editProduct(num) {
-    edit = prompt('Nhập tên muốn thay thế: ');
+    let edit = prompt('Nhập tên muốn thay thế: ');
     let name = products[num];
     delete products[num];
-    products[num]=edit;
+    products[num] = edit;
     displayProduct();
     alert(`Sản phẩm ${name} đã được chỉnh sửa thành ${products[num]}`);
 }
