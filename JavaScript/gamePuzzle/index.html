@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Puzzle</title>
+</head>
+<body>
+    <img id="img1" src="image/a1.jpg" onclick="changeImg1()">
+    <img id="img2" src="image/b3.jpg" onclick="changeImg2()">
+    <img id="img3" src="image/c2.jpg" onclick="changeImg3()">
+    <img id="img4" src="image/d4.jpg" onclick="changeImg4()">
+</body>
+</html>
+<script>
+    var image1 = document.querySelector('#img1');
+    var image2 = document.querySelector('#img2');
+    var image3 = document.querySelector('#img3');
+    var image4 = document.querySelector('#img4');
+    var imageName1;
+    var imageName2;
+    var imageName3;
+    var imageName4;
+
+    function changeImg1() {
+        imageName1 = Math.floor(Math.random() * 4 + 1);
+        image1.src = `image/a${imageName1}.jpg`;
+        console.log(imageName1);
+        if (imageName1 == imageName2 && imageName2 == imageName3 && imageName3 == imageName4 && imageName4 == imageName1) {
+                alert('done');
+        }
+    }
+    function changeImg2() {
+        imageName2 = Math.floor(Math.random() * 4 + 1);
+        image2.src = `image/b${imageName2}.jpg`;
+        console.log(imageName2);
+        if (imageName1 == imageName2 && imageName2 == imageName3 && imageName3 == imageName4 && imageName4 == imageName1) {
+                alert('done');
+        }
+    }
+    function changeImg3() {
+        imageName3 = Math.floor(Math.random() * 4 + 1);
+        image3.src = `image/c${imageName3}.jpg`;
+        console.log(imageName3);
+        if (imageName1 == imageName2 && imageName2 == imageName3 && imageName3 == imageName4 && imageName4 == imageName1) {
+                alert('done');
+        }
+    }
+    function changeImg4() {
+        imageName4 = Math.floor(Math.random() * 4 + 1);
+        image4.src = `image/d${imageName4}.jpg`;
+        console.log(imageName4);
+        if (imageName1 == imageName2 && imageName2 == imageName3 && imageName3 == imageName4 && imageName4 == imageName1) {
+                alert('done');
+        }
+    }
+</script>
